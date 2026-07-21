@@ -1,6 +1,6 @@
 # Claude Mastery
 
-**6 skills Claude Code pour passer d'une idée à un produit livré.** La méthode enseignée dans la formation [Claude Mastery](https://laccelerateuria.com) de L'Accélérateur IA, transformée en commandes que ton agent applique tout seul.
+**8 skills Claude Code pour passer d'une idée à un produit livré.** La méthode enseignée dans la formation [Claude Mastery](https://laccelerateuria.com) de L'Accélérateur IA, transformée en commandes que ton agent applique tout seul.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-0061FF) ![Installation: skills.sh](https://img.shields.io/badge/install-skills.sh-0061FF) ![Par L'Accélérateur IA](https://img.shields.io/badge/par-L'Acc%C3%A9l%C3%A9rateur%20IA-0F172A)
 
@@ -12,15 +12,15 @@
 npx skills add naiersaidane/claude-mastery
 ```
 
-La commande installe les 6 skills et les rend disponibles pour ton agent (Claude Code et tout agent qui lit les skills). Il te faut juste Node pour exécuter `npx`.
+La commande installe les 8 skills et les rend disponibles pour ton agent (Claude Code et tout agent qui lit les skills). Il te faut juste Node pour exécuter `npx`.
 
-Une fois installés, tu les déclenches par leur commande — `/interroge`, `/cadre`, `/planifie`, `/design`, `/investigue`, `/illustre` — ou par une phrase naturelle (« cadre ce projet », « débugge ça », « fais-moi un diagramme »).
+Une fois installés, tu les déclenches par leur commande — `/interroge`, `/cadre`, `/planifie`, `/design`, `/investigue`, `/illustre`, `/branche`, `/livre` — ou par une phrase naturelle (« cadre ce projet », « débugge ça », « fais-moi un diagramme »).
 
 ---
 
 ## Pourquoi ces Skills
 
-La plupart des frictions avec un agent de code ne viennent pas du modèle. Elles viennent du moment où on lui parle, et de ce qu'on lui demande. Ces 6 skills corrigent chacun un de ces moments.
+La plupart des frictions avec un agent de code ne viennent pas du modèle. Elles viennent du moment où on lui parle, et de ce qu'on lui demande. Six de ces skills corrigent chacun un de ces moments ; deux de plus — `/branche` et `/livre` — encadrent la livraison Git.
 
 **L'agent code avant d'avoir compris le besoin.** Il devine, part dans une direction, et tu t'en aperçois trop tard. → `/interroge` t'interroge une question à la fois jusqu'à une compréhension partagée, puis `/cadre` fige le besoin dans un PRD.
 
@@ -46,6 +46,8 @@ Pris ensemble, ces skills ne sont pas des raccourcis isolés : ils encodent une 
 | `/design` | Propose un système de design opinioné (typo, couleurs, layout, motion) | `docs/DESIGN.md` + preview HTML |
 | `/investigue` | Investigue un bug en 4 phases validées, sans jamais corriger à la volée | Un fix minimal validé |
 | `/illustre` | Crée des diagrammes et visuels Excalidraw (process, schémas, slides) | PNG (2x) + SVG |
+| `/branche` | Crée une branche depuis main à jour, avec préfixe conventionnel `feat/` ou `fix/` | Une branche de travail isolée |
+| `/livre` | Commit, synchronise avec main distant, push et ouvre une PR (refuse sur main) | Une Pull Request |
 
 ---
 

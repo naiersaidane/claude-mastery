@@ -1,6 +1,6 @@
 # Claude Mastery
 
-**8 skills Claude Code pour passer d'une idée à un produit livré.** La méthode enseignée dans la formation [Claude Mastery](https://laccelerateuria.com) de L'Accélérateur IA, transformée en commandes que ton agent applique tout seul.
+**9 skills Claude Code pour passer d'une idée à un produit livré.** La méthode enseignée dans la formation [Claude Mastery](https://laccelerateuria.com) de L'Accélérateur IA, transformée en commandes que ton agent applique tout seul.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-0061FF) ![Installation: skills.sh](https://img.shields.io/badge/install-skills.sh-0061FF) ![Par L'Accélérateur IA](https://img.shields.io/badge/par-L'Acc%C3%A9l%C3%A9rateur%20IA-0F172A)
 
@@ -12,15 +12,15 @@
 npx skills add naiersaidane/claude-mastery
 ```
 
-La commande installe les 8 skills et les rend disponibles pour ton agent (Claude Code et tout agent qui lit les skills). Il te faut juste Node pour exécuter `npx`.
+La commande installe les 9 skills et les rend disponibles pour ton agent (Claude Code et tout agent qui lit les skills). Il te faut juste Node pour exécuter `npx`.
 
-Une fois installés, tu les déclenches par leur commande — `/interroge`, `/cadre`, `/planifie`, `/design`, `/investigue`, `/illustre`, `/branche`, `/livre` — ou par une phrase naturelle (« cadre ce projet », « débugge ça », « fais-moi un diagramme »).
+Une fois installés, tu les déclenches par leur commande — `/interroge`, `/cadre`, `/planifie`, `/design`, `/investigue`, `/illustre`, `/branche`, `/verifie`, `/livre` — ou par une phrase naturelle (« cadre ce projet », « débugge ça », « vérifie que tout marche », « fais-moi un diagramme »).
 
 ---
 
 ## Pourquoi ces Skills
 
-La plupart des frictions avec un agent de code ne viennent pas du modèle. Elles viennent du moment où on lui parle, et de ce qu'on lui demande. Six de ces skills corrigent chacun un de ces moments ; deux de plus — `/branche` et `/livre` — encadrent la livraison Git.
+La plupart des frictions avec un agent de code ne viennent pas du modèle. Elles viennent du moment où on lui parle, et de ce qu'on lui demande. Six de ces skills corrigent chacun un de ces moments ; trois de plus — `/branche`, `/verifie` et `/livre` — encadrent la livraison.
 
 **L'agent code avant d'avoir compris le besoin.** Il devine, part dans une direction, et tu t'en aperçois trop tard. → `/interroge` t'interroge une question à la fois jusqu'à une compréhension partagée, puis `/cadre` fige le besoin dans un PRD.
 
@@ -29,6 +29,8 @@ La plupart des frictions avec un agent de code ne viennent pas du modèle. Elles
 **Le design est bricolé après coup.** Couleurs et typo choisies au hasard, écran par écran. → `/design` propose un système cohérent et opinioné, documenté et prévisualisable avant la première ligne de CSS.
 
 **Un bug, et c'est la chasse à l'aveugle.** On change trois choses au hasard en espérant que ça passe. → `/investigue` déroule 4 phases validées : localiser, formuler des hypothèses, instrumenter, corriger au minimum.
+
+**L'agent annonce « c'est fait » sans l'avoir prouvé.** Le code compile, les tests passent, et pourtant le parcours est cassé dans l'app. → `/verifie` lance l'app, rejoue chaque critère d'acceptation du plan en test E2E, et rend un rapport de preuves. `/livre` refuse de livrer sans lui.
 
 **Expliquer une idée à l'oral, c'est lent.** Un schéma vaut dix paragraphes. → `/illustre` génère des diagrammes Excalidraw nets en PNG et SVG.
 
@@ -47,7 +49,8 @@ Pris ensemble, ces skills ne sont pas des raccourcis isolés : ils encodent une 
 | `/investigue` | Investigue un bug en 4 phases validées, sans jamais corriger à la volée | Un fix minimal validé |
 | `/illustre` | Crée des diagrammes et visuels Excalidraw (process, schémas, slides) | PNG (2x) + SVG |
 | `/branche` | Crée une branche depuis main à jour, avec préfixe conventionnel `feat/` ou `fix/` | Une branche de travail isolée |
-| `/livre` | Commit, synchronise avec main distant, push et ouvre une PR (refuse sur main) | Une Pull Request |
+| `/verifie` | Prouve que le changement marche sur l'app qui tourne : contrôles rapides, E2E par critère du plan, checklist issue des bugs passés, passe exploratoire | `docs/VERIFICATION.md` + tests E2E + rapport de preuves |
+| `/livre` | Vérifie, commit, synchronise avec main distant, push et ouvre une PR avec les preuves (refuse sur main) | Une Pull Request |
 
 ---
 
@@ -57,7 +60,7 @@ Pris ensemble, ces skills ne sont pas des raccourcis isolés : ils encodent une 
   <img src="assets/hero.png" alt="Claude Mastery — L'Accélérateur IA" width="640">
 </p>
 
-Ces skills sont la version outillée de ce qu'on enseigne dans **Claude Mastery**, la formation de **L'Accélérateur IA** pour construire avec Claude Code. La même méthode — cadrer, planifier, designer, livrer — appliquée à de vrais projets.
+Ces skills sont la version outillée de ce qu'on enseigne dans **Claude Mastery**, la formation de **L'Accélérateur IA** pour construire avec Claude Code. La même méthode — cadrer, planifier, designer, vérifier, livrer — appliquée à de vrais projets.
 
 👉 **[Découvrir la formation Claude Mastery](https://laccelerateuria.com)**
 

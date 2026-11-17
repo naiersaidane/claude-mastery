@@ -1,7 +1,7 @@
 {
   "name": "claude-mastery",
-  "version": "1.1.0",
-  "description": "Skills Claude Code de la formation Claude Mastery de L'Accélérateur IA — interroge, cadre, planifie, design, investigue, illustre, branche, livre",
+  "version": "1.2.0",
+  "description": "Skills Claude Code de la formation Claude Mastery de L'Accélérateur IA — interroge, cadre, planifie, design, investigue, illustre, branche, verifie, livre",
   "author": {
     "name": "Naier Saidane",
     "email": "naier@laccelerateuria.com"
@@ -15,6 +15,7 @@
     "./skills/investigue",
     "./skills/illustre",
     "./skills/branche",
+    "./skills/verifie",
     "./skills/livre"
   ]
 }

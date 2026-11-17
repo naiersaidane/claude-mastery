@@ -26,3 +26,8 @@ Règle des 3 strikes : si les 3 hypothèses sont fausses, STOP. Ce n'est plus un
 
 ## PHASE 4 : Fix minimal.
 Une fois l'hypothèse confirmée, propose les modifications les plus courtes qui traitent la cause racine. Pas d'optimisation collatérale, pas de refactor opportuniste. Rédige le message de commit en expliquant la cause racine, pas le symptôme.
+
+Puis transforme le bug en garde-fou, pour qu'il ne revienne pas :
+- **Test de non-régression** : écris un test qui reproduit le scénario de la phase 1 et échoue sans le fix. Si le bug touche un parcours utilisateur, c'est un E2E rattaché au critère du PLAN concerné.
+- **Item de checklist** : si le bug est repérable dans un diff (« quand on touche X, Y casse »), propose un item pour la section « Checklist déclenchée par le diff » de `docs/VERIFICATION.md`, au format `C-<n>` (Déclencheur / Vérification / Origine). Ajoute-le seulement avec mon accord.
+- Retire tous les logs `[DEBUG-xxxx]` de la phase 3.

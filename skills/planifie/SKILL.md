@@ -17,6 +17,8 @@ Par défaut, lis `docs/PRD.md`. Si un chemin de fichier est passé en argument, 
 
 Si `docs/PLAN.md` existe déjà, lis-le. Repère les user stories du PRD non couvertes par une phase existante et les incohérences avec un PRD qui a bougé. Ne réécris pas les phases déjà validées ; propose des phases additionnelles ou des extensions ciblées, et signale les contradictions à l'utilisateur avant d'écrire.
 
+Si les critères d'acceptation existants n'ont pas d'identifiant `P<phase>-C<n>` ou ne sont pas au format scénario observable (voir `<règles-critères>`), propose de les convertir. La conversion reformule sans changer le sens ; montre l'avant/après et attends la validation.
+
 ### 3. Explore le codebase
 
 Si tu n'as pas déjà exploré le codebase, fais-le pour comprendre l'architecture actuelle, les patterns en place et les couches d'intégration. Si le projet est vierge (greenfield), saute cette étape.
@@ -44,6 +46,16 @@ Découpe le PRD en phases **tracer bullets**. Chaque phase est une tranche fine 
 - N'inclus PAS les noms de fichiers, noms de fonctions, ou détails d'implémentation susceptibles de changer
 - INCLUS les décisions durables : routes, formes de schéma, noms de modèles
 </règles-tranche-verticale>
+
+<règles-critères>
+Les critères d'acceptation sont la liste de ce que `/verifie` prouvera : chacun deviendra un test E2E.
+
+- **Identifiant** : `P<phase>-C<n>` (ex. `P2-C3`), stable une fois écrit. Un critère supprimé ne libère pas son numéro.
+- **Scénario observable** : *« <acteur> <action>, il/elle voit <résultat observable> »*. Le résultat se constate de l'extérieur : un écran, un message, un fichier produit, une réponse HTTP, une sortie de commande.
+- **Pas de jugement intérieur ni de détail d'implémentation** : pas de « le code est propre », « la fonction X est appelée », « l'utilisateur comprend ».
+- Couvre aussi les états vides, les erreurs et les cas limites que la phase introduit.
+- **Invariants** (optionnel) : si la phase contient de la logique métier, liste les propriétés qui doivent toujours tenir (aller-retour, invariant, idempotence). `/verifie` pourra en faire des tests de propriétés.
+</règles-critères>
 
 ### 6. Quiz l'utilisateur
 
@@ -91,9 +103,15 @@ Description concise de cette tranche verticale. Décris le comportement de bout 
 
 ### Critères d'acceptation
 
-- [ ] Critère 1
-- [ ] Critère 2
-- [ ] Critère 3
+- [ ] **P1-C1** : <acteur> <action>, il/elle voit <résultat observable>
+- [ ] **P1-C2** : ...
+- [ ] **P1-C3** : ...
+
+### Invariants
+
+<!-- Optionnel, seulement si la phase contient de la logique métier. Sinon, supprime la section. -->
+
+- <propriété qui doit toujours tenir>
 
 ## Bloquée par
 
@@ -113,7 +131,7 @@ Ou *« Aucune — démarrable immédiatement »* s'il n'y a pas de bloqueur.
 
 ### Critères d'acceptation
 
-- [ ] ...
+- [ ] **P2-C1** : ...
 
 ## Bloquée par
 
